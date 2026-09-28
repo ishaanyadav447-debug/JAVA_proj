@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complaint Registration Form - Viva Institute of Technology">
+    <title>Complaint Registration Form</title>
+    <style>
+        h2 {
+            text-decoration: underline;
+            color: rgb(186, 211, 206)
+        }
+
+        body {
+            min-height: 100vh;
+            padding-left: 15px;
+            width: 90%;
+            color: #F6E8D0;
+            margin: 0px;
+            padding-left: 10%;
+        }
+
+        label {
+            padding-bottom: 90px;
+            background-color: transparent
+        }
+
+        form {
+            background-color: #8C92AC;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>COMPLAINT REGISTRATION FORM</h2>
+    <form action="SubmitComplaintServlet" method="POST" enctype="multipart/form-data">
+
+        <label for="name">Enter Your Name:</label><br>
+        <input type="text" id="name" name="name" maxlength="30" required><br>
+
+        <label for="email">Email-ID given by college:</label>
+        <input type="email" id="email" name="mail" required><br>
+
+        <label for="dept">Your Department:</label><br>
+        <select id="dept" name="dept" required><br>
+            <optgroup label="B.E">
+                <option value="CSE(AI-ML)">CSE(AI-ML)</option>
+                <option value="EXTC">EXTC</option>
+                <option value="CIVIL">CIVIL ENGG</option>
+                <option value="MECHANICAL">MECHANICAL ENGG</option>
+            </optgroup>
+            <optgroup label="DIPLOMA">
+                <option value="CSE(AI-ML)">CSE(AI-ML)</option>
+                <option value="EXTC">EXTC</option>
+                <option value="CIVIL">CIVIL ENGG</option>
+                <option value="MECHANICAL">MECHANICAL ENGG</option>
+            </optgroup>
+        </select><br>
+        <label for="room_no">Room Number:</label>
+        <input type="text" id="room_no" name="room_no" placeholder="e.g. 301" required><br>
+        <label for="sub">Subject of Complaint:</label><br>
+        <input type="text" id="sub" name="sub" maxlength="40" required><br>
+        <label for="complaint">Enter Your Complaint:</label><br>
+        <textarea id="complaint" name="complnt" maxlength="300" rows="4" placeholder="Describe the issue..."
+            required></textarea><br>
+        <labelfor="proof">File attachment to support complaint (JPEG, PNG, PDF only):</label>
+            <input type="file" id="proof" name="proof" accept="image/jpeg,image/png,application/pdf"><br>
+            <button type="submit">Submit Complaint</button>
+    </form>
+</body>
+
+</html>
